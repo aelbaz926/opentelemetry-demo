@@ -71,7 +71,7 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
           with: 
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.TOKEN }}
 
         - name: Update k8s deployment file
           run: |
