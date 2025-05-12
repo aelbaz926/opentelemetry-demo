@@ -42,7 +42,8 @@ jobs:
               echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
         - name: Run golangci-lint
-          run: golangci-lint run src/product-catalog/...
+          working-directory: src/product-catalog
+          run: golangci-lint run ./...
 
     Docker:
         runs-on: ubuntu-latest
